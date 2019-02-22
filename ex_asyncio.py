@@ -25,7 +25,7 @@ async def job(t):
 
 async def main(loop):
     tasks = [
-    loop.create_task(job(t)) for t in range(1, 10)
+    loop.create_task(job(t)) for t in range(1, 100)
     ]
     await asyncio.wait(tasks)
 
