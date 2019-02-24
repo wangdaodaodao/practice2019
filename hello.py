@@ -13,7 +13,6 @@ asyncio,
 tkinter,
 pyqt,
 six
-
 */
 
 # 主要是测试框架
