@@ -37,14 +37,19 @@ import aiohttp
 #     loop.close()
 #     print('有async耗时总时间{}'.format(time.time() - t1))
 
-url = 'http://www.baidu.com/'
+url = 'http://www.google.com/'
 
 
 def normal():
-    for i in range(30):
-        response = requests.get(url)
-        url2 = response.url
-        print(url2)
+    x = 1
+    for i in range(300):
+        try:
+                response = requests.get(url)
+                url2 = response.url
+        except:
+                print('wong')
+        print(url2, x)
+        x += 1
 
 
 t1 = time.time()
